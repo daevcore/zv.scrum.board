@@ -1,2 +1,2 @@
 # SCRUM Board
-A SCRUM dashboard with sprint statistics and sprint management.
+SAPUI5 SCRUM dashboard with sprint statistics and sprint management.
