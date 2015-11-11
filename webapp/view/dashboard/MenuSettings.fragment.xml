@@ -1,0 +1,14 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified">
+	<u:Menu id="idMenuSettings">
+		<u:items>
+			<u:MenuItem text="Create new sprint" select="onPressSprintCreate" icon="sap-icon://add"/>
+			<u:MenuItem text="Edit current sprint" select="onPressSprintEdit" icon="sap-icon://edit"/>
+			
+			<u:MenuItem text="Add timebox" select="onPressSprintTimeboxAdd" icon="sap-icon://time-entry-request" startsSection="true"/>
+			<u:MenuItem text="Remove timebox" select="onPressSprintTimeboxRemove" />
+			
+			<u:MenuItem text="Add story" select="onPressSprintStoryAdd" icon="sap-icon://product" startsSection="true"/>
+			<u:MenuItem text="Remove story" select="onPressSprintStoryRemove" />
+		</u:items>
+	</u:Menu>
+</core:FragmentDefinition>

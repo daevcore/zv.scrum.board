@@ -1,0 +1,3 @@
+<mvc:View controllerName="zv.scrum.board.controller.App" displayBlock="true" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<App class="sapUiDemoWT" id="app"/>
+</mvc:View>

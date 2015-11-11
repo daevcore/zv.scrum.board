@@ -1,0 +1,11 @@
+<mvc:View controllerName="zv.scrum.board.controller.Chartboard" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:sap.ui.core="sap.ui.core" xmlns:suite="sap.suite.ui.commons" xmlns="sap.m">
+	<Page title="Chart board" showNavButton="true" navButtonPress="onPressBack">
+		<headerContent>
+			<!--<Button icon="sap-icon://hello-world" press="onOpenDialog"/>-->
+		</headerContent>
+		<content>
+
+		</content>
+	</Page>
+</mvc:View>

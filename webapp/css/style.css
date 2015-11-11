@@ -1,0 +1,19 @@
+.sapUiDemoWT .myCustomButton.sapMBtn {
+	margin-right: 0.125rem;
+}
+
+.sapUiDemoWT .myCustomText {
+	font-weight: bold;
+}
+
+.zvBg01{
+	background-color:#fcfcfc;
+}
+
+.zVwrap{
+	white-space: normal;
+}
+
+.zVfull{
+	width: 100% !important;
+}

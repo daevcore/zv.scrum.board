@@ -1,0 +1,107 @@
+{
+	"_version": "1.1.0",
+	"sap.app": {
+		"_version": "1.1.0",
+		"id": "zv.scrum.board",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"ach": "CA-UI5-DOC",
+		"dataSources": {
+			"ZV_SCRUM_SERVICE_SRV": {
+				"uri": "/sap/opu/odata/sap/ZV_SCRUM_SERVICE_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0"
+				}
+			}
+		},
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponent",
+			"version": "0.0.0"
+		}
+	},
+	"sap.ui": {
+		"_version": "1.1.0",
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_bluecrystal"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"rootView": "zv.scrum.board.view.App",
+		"dependencies": {
+			"minUI5Version": "1.30",
+			"libs": {
+				"sap.m": {},
+				"sap.suite.ui.commons": {}
+			}
+		},
+		"config": {
+			"aConfigEntry": "A config value"
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "zv.scrum.board.i18n.i18n"
+				}
+			},
+			"oDataService": {
+				"dataSource": "ZV_SCRUM_SERVICE_SRV"
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "zv.scrum.board.view",
+				"controlId": "app",
+				"controlAggregation": "pages"
+			},
+			"routes": [{
+				"pattern": "",
+				"name": "dashboard",
+				"target": "dashboard"
+			}, {
+				"pattern": "storyboard",
+				"name": "storyboard",
+				"target": "storyboard"
+			}, {
+				"pattern": "chartboard",
+				"name": "chartboard",
+				"target": "chartboard"
+			}],
+			"targets": {
+				"dashboard": {
+					"viewName": "Dashboard"
+				},
+				"storyboard": {
+					"viewName": "Storyboard"
+				},
+				"chartboard": {
+					"viewName": "Chartboard"
+				}
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		}
+	}
+}

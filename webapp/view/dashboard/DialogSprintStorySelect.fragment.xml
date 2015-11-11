@@ -1,0 +1,29 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<Dialog title="Select story from backlog">
+		<content>
+			<Table items="{StoryData>/StorySet}" fixedLayout="false">
+				<columns>
+					<Column><Label text="Jira"/></Column>
+					<Column><Label text="Title"/></Column>
+					<Column><Label text="SPs"/></Column>
+					<Column><Label text="Sprint est."/></Column>
+					<Column><Label text="Status"/></Column>
+				</columns>
+				<items>
+					<ColumnListItem type="Active" press="onPressSprintStorySelectLine">
+						<cells>
+							<Text text="{StoryData>StoryJira}"/>
+							<Text text="{StoryData>StoryTitle}"/>
+							<Text text="{StoryData>StoryPoints}"/>
+							<Text text="{StoryData>StorySprintEstimated}"/>
+							<Text text="{StoryData>StoryStatus}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+		<endButton>
+			<Button icon="sap-icon://decline" press="onPressSprintStorySelectCancel" text="Cancel"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>
