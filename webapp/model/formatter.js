@@ -24,6 +24,12 @@ sap.ui.define([], function () {
 				sColor = "#007833";
 			}
 			return sColor;
+		},
+		
+		activityDateTime: function (oData) {
+			var dDateTime = new Date(Date.UTC(oData.slice(0, 4), oData.slice(4, 6) - 1, oData.slice(6, 8), oData.slice(8, 10), oData.slice(10, 12), oData.slice(12, 14)));
+			//dDateTime.setTime(dDateTime.getTime() + dDateTime.getTimezoneOffset()*60*1000);
+			return dDateTime;
 		}
 	};
 });

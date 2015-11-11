@@ -170,7 +170,19 @@
 							
 							<Panel id="dashboardModuleActivityList" height="400px" busyIndicatorDelay="0">
 								<content>
-									<Text text="Activity stream"></Text>
+									<suite:Timeline showHeaderBar="false" content="{DashboardData>/DashboardActivitySet/results}" enableScroll="false">
+										<suite:content>
+											<suite:TimelineItem
+											    dateTime="{path: 'DashboardData>Timestamp', formatter: '.formatter.activityDateTime'}"
+											   	userNameClickable="false"
+											   	text="{DashboardData>Description}"
+												userName="{DashboardData>Person}"
+												title="{DashboardData>Action}"
+												filterValue="Action"
+												icon="sap-icon://notes">
+											</suite:TimelineItem>
+										</suite:content>
+									</suite:Timeline>
 								</content>
 								<layoutData>
 									<l:GridData span="XL12 L12 M12 S12"/>

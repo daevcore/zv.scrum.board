@@ -194,11 +194,23 @@ sap.ui.define([
 		},
 		
 		onPressSprintTimeboxRemoveSave: function(oEvent) {
-			console.log(this._oDialogSprintTimeboxRemove.byId("selectTimebox").getSelectedKey());
+			var sSprintId = this.getView().getModel("DashboardData").getProperty("/SprintId");
+			var sTimeboxId = this._oDialogSprintTimeboxRemove.getContent()[0].getItems()[0].getSelectedKey();
 			
-			console.log(oEvent.getSource());
-			console.log(oEvent.getSource().getBindingContext("TimeboxData").getObject());
-			//this._oDialogSprintTimeboxRemove.close();
+			this.getOwnerComponent().getModel("oDataService").remove(
+				"/SprintTimeboxSet(SprintId='" + sSprintId + "',TimeboxId='" + sTimeboxId + "')",
+				{
+					"async": false,
+					"success": function() {
+						this._oDialogSprintTimeboxRemove.close();
+						this._loadDashboardModelData();
+					}.bind(this),
+					"error": function(oError) {
+						var oErrorBody = JSON.parse(oError.responseText);
+						MessageBox.show(oErrorBody.error.message.value, sap.m.MessageBox.Icon.ERROR, "Fehler");
+					}
+				}
+			);
 		},
 		
 		onPressSprintTimeboxRemoveCancel: function(oEvent) {

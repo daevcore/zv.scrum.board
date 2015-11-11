@@ -2,7 +2,7 @@
 	<Dialog title="Remove timebox">
 		<content>
 			<VBox class="sapUiSmallMargin">
-				<Select id="selectTimebox" width="100%" items="{TimeboxData>/results}">
+				<Select id="idTimeboxRemoveSelect" width="100%" items="{TimeboxData>/results}">
 					<core:Item key="{TimeboxData>TimeboxId}" text="{TimeboxData>TimeboxTitle}" />
 				</Select>
 			</VBox>
