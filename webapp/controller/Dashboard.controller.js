@@ -22,7 +22,7 @@ sap.ui.define([
 		},
 		
 		// --------------------------------------------------
-		// ACTIONS
+		// ACTIONS in view
 		// --------------------------------------------------
 		onPressReload: function() {
 			this._loadDashboardModelData();
