@@ -18,7 +18,7 @@ sap.ui.define([
 			this._initDashboardChartBurndown();
 			
 			this._loadDashboardModelData();
-			this._test();
+			// this._test();
 		},
 		
 		// --------------------------------------------------
