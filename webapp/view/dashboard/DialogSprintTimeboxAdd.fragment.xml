@@ -3,7 +3,7 @@
 		<content>
 			<VBox class="sapUiSmallMargin">
 				<Label text="Title"/>
-				<Input value="{TimeboxData>/TimeboxTitle}" placeholder="Timebox title..." />
+				<Input value="{TimeboxData>/TimeboxTitle}" placeholder="{i18n>timeboxTitlePlaceholder}" />
 				
 				<Label text="Hours"/>
 				<Input value="{TimeboxData>/TimeboxHours}" type="Number" placeholder="Timebox hours..." maxLength="3"/>

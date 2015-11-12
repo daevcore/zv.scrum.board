@@ -14,10 +14,13 @@ sap.ui.define([
 		// INITIALIZATION
 		// --------------------------------------------------
 		onInit: function() {
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.getRoute("dashboard").attachPatternMatched(this._loadDashboardModelData, this);
+			
 			this._initDashboardModel();
 			this._initDashboardChartBurndown();
 			
-			this._loadDashboardModelData();
+			//this._loadDashboardModelData();
 			// this._test();
 		},
 		

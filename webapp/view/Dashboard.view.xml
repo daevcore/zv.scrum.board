@@ -1,6 +1,6 @@
 <mvc:View controllerName="zv.scrum.board.controller.Dashboard" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc"
 	xmlns:sap.ui.core="sap.ui.core" xmlns:suite="sap.suite.ui.commons" xmlns:table="sap.ui.table" xmlns="sap.m">
-	<Page title="zv - SCRUM Board" backgroundDesign="Standard" id="pageDashboard" busyIndicatorDelay="0">
+	<Page title="{i18n>pageDashboardTitle}" backgroundDesign="Standard" id="pageDashboard" busyIndicatorDelay="0">
 		<headerContent>
 			<Button icon="sap-icon://refresh" press="onPressReload"/>
 			<Button icon="sap-icon://full-stacked-column-chart" press="onPressStoryboard"/>

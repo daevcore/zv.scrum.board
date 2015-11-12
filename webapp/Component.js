@@ -12,7 +12,7 @@ sap.ui.define([
 		init: function() {
 			// INIT FUNCTION OF PARENT
 			UIComponent.prototype.init.apply(this, arguments);
-
+			
 			// MODEL SETTINGS (Event handlers etc.)
 			this.getModel("oDataService").setUseBatch(true);
 			
