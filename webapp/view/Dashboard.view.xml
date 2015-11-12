@@ -176,7 +176,7 @@
 											    dateTime="{path: 'DashboardData>Timestamp', formatter: '.formatter.activityDateTime'}"
 											   	userNameClickable="false"
 											   	text="{DashboardData>Description}"
-												userName="{DashboardData>Person}"
+												userName="{DashboardData>Person}:"
 												title="{DashboardData>Action}"
 												filterValue="Action"
 												icon="sap-icon://notes">
