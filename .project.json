@@ -1,0 +1,6 @@
+{
+  "deploy": {
+    "destination": "S74",
+    "name": "ZVS_SCRUM_BOARD"
+  }
+}

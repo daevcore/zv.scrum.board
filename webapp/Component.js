@@ -15,6 +15,7 @@ sap.ui.define([
 			
 			// MODEL SETTINGS (Event handlers etc.)
 			this.getModel("oDataService").setUseBatch(true);
+			this.getModel("oDataService").bDisableHeadRequestForToken = true;
 			
 			// INITIALIZE ROUTER
 			this.getRouter().initialize();

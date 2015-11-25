@@ -27,6 +27,15 @@
         "entryPath": "/sap/opu/odata"
       },
       "description": "S74"
+    },
+    {
+      "path": "/ui5_execute_abap",
+      "target": {
+        "type": "destination",
+        "name": "S74",
+        "entryPath": "/sap/bc/ui5_ui5"
+      },
+      "description": "S74"
     }
   ]
 }

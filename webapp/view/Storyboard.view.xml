@@ -7,13 +7,13 @@
 		<content>
 			<l:Grid defaultIndent="XL0 L0 M0 S0" defaultSpan="XL4 L4 M4 S12" position="Left">
 				<l:content>
-					<Panel headerText="Open" width="100%" backgroundDesign="Transparent">
+					<Panel headerText="Open" width="100%" backgroundDesign="Transparent" content="{oDataService>/StorySet}">
 						<content>
 							<Panel>
 								<content>
 									<HBox justifyContent="SpaceBetween">
 										<items>
-											<Title class="zVwrap sapUiMediumMarginEnd" level="H4" text="This is the title of the story that sometimes is a bit longer" titleStyle="H4"/>
+											<Title class="zVwrap sapUiMediumMarginEnd" level="H4" text="{oDataService>StoryTitle}" titleStyle="H4"/>
 											<!--<sap.ui.core:Icon size="2rem" src="sap-icon://activity-items"></sap.ui.core:Icon>-->
 											<Title level="H1" text="5 SP" titleStyle="H1"/>
 										</items>
